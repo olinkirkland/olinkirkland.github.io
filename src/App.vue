@@ -1,14 +1,26 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import About from './components/About.vue';
+import CertificatesEducation from './components/CertificatesEducation.vue';
+import ContactBanner from './components/ContactBanner.vue';
+import Footer from './components/Footer.vue';
+import Hero from './components/Hero.vue';
+import Projects from './components/Projects.vue';
+import Skills from './components/Skills.vue';
+import Timeline from './components/Timeline.vue';
+import { initializeI18nInstance } from './i18n/locale';
+
+initializeI18nInstance();
+</script>
 
 <template>
-    <section>HERO</section>
-    <section>ABOUT</section>
-    <section>SKILLS</section>
-    <section>PROJECTS</section>
-    <section>TIMELINE</section>
-    <section>CERTIFICATES-EDUCATION</section>
-    <section>CONTACT-BANNER</section>
-    <section>FOOTER</section>
+    <Hero />
+    <About />
+    <Skills />
+    <Projects />
+    <Timeline />
+    <CertificatesEducation />
+    <ContactBanner />
+    <Footer />
 </template>
 
 <style lang="scss">
