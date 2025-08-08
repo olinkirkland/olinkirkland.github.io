@@ -1,7 +1,6 @@
 * {
-    font-family: var(--body);
+    font-family: var(--body-font);
     font-size: 1.6rem;
-    color: var(--on-surface);
 }
 
 html,
@@ -10,10 +9,10 @@ body {
      Still keeps swipe navigations. */
     overscroll-behavior-y: none;
     overscroll-behavior-x: none;
+    color: var(--body);
 }
 
 // Typography
-
 h1,
 h2,
 h3,
@@ -22,13 +21,23 @@ h5,
 h6 {
     font-size: 1.6rem;
     font-weight: normal;
-    color: var(--on-surface);
+}
+
+h1 {
+    font-family: var(--display-font);
+    font-size: 3.2rem;
+    font-weight: bold;
+    text-transform: lowercase;
+}
+
+h2 {
+    font-size: 2.8rem;
+    font-weight: bold;
 }
 
 h3 {
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-weight: bold;
-    color: var(--surface-alt);
     text-transform: uppercase;
 }
 
@@ -39,15 +48,26 @@ h4 {
     font-weight: normal;
 }
 
+h5 {
+    font-size: 1.4rem;
+    font-weight: normal;
+}
+
+h6 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
 code {
     font-family: monospace;
-    color: var(--on-surface);
+    color: var(--body);
     background-color: var(--overlay);
     padding: 0.1rem 0.4rem;
 }
 
 pre {
-    border-left: 0.4rem solid orange;
+    border-left: 0.4rem solid var(--accent-1);
     text-align: left;
     padding: 1rem;
     overflow: auto;
@@ -84,4 +104,40 @@ i {
 
 :focus {
     outline: none;
+}
+
+.flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+
+    &.wrap {
+        flex-wrap: wrap;
+    }
+
+    &.center {
+        justify-content: center;
+        align-items: center;
+    }
+
+    &.spread {
+        justify-content: space-between;
+    }
+
+    &.row {
+        flex-direction: row;
+    }
+
+    &.column {
+        flex-direction: column;
+    }
+}
+
+section {
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 120rem;
+    width: 100%;
+    box-sizing: border-box;
 }
