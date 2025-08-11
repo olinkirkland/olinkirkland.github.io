@@ -1,5 +1,5 @@
 <template>
-    <div class="button-container">
+    <div class="button-container light" :class="`${props.class}`">
         <button>
             <slot></slot>
         </button>
@@ -14,9 +14,6 @@ const props = defineProps({
         default: ''
     }
 });
-
-// TODO: Define the styles
-// light, dark, accent-1, accent-2, accent-3, accent-4, hollow
 </script>
 
 <style lang="scss">
@@ -63,5 +60,66 @@ button:active {
 // When button is active, the shadow should be slightly offset
 button:active ~ .button-shadow {
     display: none;
+}
+
+// Light
+.button-container.light {
+    button {
+        background-color: var(--surface);
+        color: var(--body);
+    }
+    .button-shadow {
+        background-color: var(--surface-dark);
+    }
+}
+
+.button-container.dark {
+    button {
+        background-color: var(--body);
+        color: var(--surface);
+    }
+    .button-shadow {
+        background-color: var(--body-dark);
+    }
+}
+
+.button-container.accent-1 {
+    button {
+        background-color: var(--accent-1);
+        color: var(--body);
+    }
+    .button-shadow {
+        background-color: var(--accent-1-dark);
+    }
+}
+
+.button-container.accent-2 {
+    button {
+        background-color: var(--accent-2);
+        color: var(--body);
+    }
+    .button-shadow {
+        background-color: var(--accent-2-dark);
+    }
+}
+
+.button-container.accent-3 {
+    button {
+        background-color: var(--accent-3);
+        color: var(--body);
+    }
+    .button-shadow {
+        background-color: var(--accent-3-dark);
+    }
+}
+
+.button-container.accent-4 {
+    button {
+        background-color: var(--accent-4);
+        color: var(--body);
+    }
+    .button-shadow {
+        background-color: var(--accent-4-dark);
+    }
 }
 </style>

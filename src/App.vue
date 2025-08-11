@@ -10,7 +10,7 @@
             <CertificatesEducation />
             <ContactBanner />
         </div>
-        <Footer />
+        <Footer @scrollToTop="scrollToTop" />
     </div>
 </template>
 
@@ -26,6 +26,10 @@ import Timeline from './components/Timeline.vue';
 import { initializeI18nInstance } from './i18n/locale';
 
 initializeI18nInstance();
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 </script>
 
 <style lang="scss">

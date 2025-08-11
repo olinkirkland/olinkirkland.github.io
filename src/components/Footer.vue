@@ -3,8 +3,8 @@
         <div class="footer-content">
             <h3>Olin Kirkland</h3>
             <p>
-                A web developer living and working in Albany, NY with a passion
-                for creating intuitive, functional websites and applications.
+                Living and working in Albany, New York. I write full-stack code
+                for web-apps and games.
             </p>
 
             <!-- Social links -->
@@ -18,7 +18,7 @@
                 </a>
             </div>
 
-            <Button class="surface hollow">
+            <Button class="dark" @click="$emit('scrollToTop')">
                 <i class="icon fas fa-arrow-up"></i>
                 <span>Back to top</span>
             </Button>
@@ -41,7 +41,9 @@
     </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineEmits<{ (e: 'scrollToTop'): void }>();
+</script>
 
 <style lang="scss">
 footer {
@@ -50,13 +52,13 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 2rem;
     padding: 2rem;
-    background-color: var(--body);
+    background-color: var(--surface-inverted);
 }
 
 .footer-content {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2.4rem;
     color: var(--surface);
 }
 
