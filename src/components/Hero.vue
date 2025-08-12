@@ -15,7 +15,7 @@
 // Placeholder Hero component
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .hero {
     position: relative;
     overflow: hidden;
@@ -51,5 +51,21 @@
     z-index: 1;
     color: var(--surface);
     transform: translateY(-50%);
+}
+</style>
+
+<style lang="scss" scoped>
+.hero {
+    .hero-content {
+        padding: 3.2rem;
+
+        h1 {
+            font-size: 4.8rem;
+        }
+
+        h2 {
+            font-size: 2.4rem;
+        }
+    }
 }
 </style>
