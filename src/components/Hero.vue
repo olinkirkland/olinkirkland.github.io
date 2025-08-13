@@ -2,11 +2,35 @@
     <div class="hero">
         <div class="hero-background"></div>
         <section class="hero-content">
-            <h1>Hi, I'm Olin.</h1>
-            <h2>I'm a web-developer living and working in Albany, New York.</h2>
-            <h2 class="muted">
-                I write full-stack code for web-apps and games.
-            </h2>
+            <h1>Olin Kirkland.</h1>
+            <Marker />
+            <div>
+                <h2>Web-developer based in Albany, New York.</h2>
+                <h2 class="muted">
+                    I write full-stack code for web-apps and games.
+                </h2>
+            </div>
+
+            <!-- Social Links and Resume Button -->
+            <div class="hero-links">
+                <a class="link" href="mailto:me@olinkirk.land">
+                    me@olinkirk.land
+                </a>
+                <a
+                    href="https://github.com/olinkirkland"
+                    class="icon"
+                    target="_blank"
+                >
+                    <i class="icon fab fa-github"></i>
+                </a>
+                <a
+                    href="https://linkedin.com/in/olin-kirkland"
+                    class="icon"
+                    target="_blank"
+                >
+                    <i class="icon fab fa-linkedin"></i>
+                </a>
+            </div>
         </section>
     </div>
 </template>
@@ -51,6 +75,16 @@
     z-index: 1;
     color: var(--surface);
     transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hero-links {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
 }
 </style>
 

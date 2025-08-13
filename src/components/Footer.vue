@@ -109,7 +109,6 @@
                 </a>
 
                 <!-- Social links -->
-                <!-- Github, LinkedIn, Email -->
                 <div class="flex">
                     <a href="https://github.com/olinkirkland" target="_blank">
                         <i class="icon fab fa-github"></i>
@@ -182,11 +181,6 @@ footer section {
             gap: 0.4rem;
         }
     }
-}
-
-a i {
-    font-size: 2.4rem;
-    color: var(--surface);
 }
 </style>
 
