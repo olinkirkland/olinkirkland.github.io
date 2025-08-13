@@ -13,22 +13,30 @@
 
             <!-- Social Links and Resume Button -->
             <div class="hero-links">
+                <!-- Download Resume -->
+                <Button class="light" @click="downloadResume">
+                    <i class="icon fas fa-arrow-down"></i>
+                    <span>Resume (113 KB)</span>
+                </Button>
+
+                <div class="flex">
+                    <a
+                        href="https://github.com/olinkirkland"
+                        class="icon"
+                        target="_blank"
+                    >
+                        <i class="icon fab fa-github"></i>
+                    </a>
+                    <a
+                        href="https://linkedin.com/in/olin-kirkland"
+                        class="icon"
+                        target="_blank"
+                    >
+                        <i class="icon fab fa-linkedin"></i>
+                    </a>
+                </div>
                 <a class="link" href="mailto:me@olinkirk.land">
                     me@olinkirk.land
-                </a>
-                <a
-                    href="https://github.com/olinkirkland"
-                    class="icon"
-                    target="_blank"
-                >
-                    <i class="icon fab fa-github"></i>
-                </a>
-                <a
-                    href="https://linkedin.com/in/olin-kirkland"
-                    class="icon"
-                    target="_blank"
-                >
-                    <i class="icon fab fa-linkedin"></i>
                 </a>
             </div>
         </section>
@@ -36,7 +44,14 @@
 </template>
 
 <script setup lang="ts">
-// Placeholder Hero component
+function downloadResume() {
+    const link = document.createElement('a');
+    link.href = '/assets/files/resume-en.pdf';
+    link.download = 'olin-kirkland-resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
 </script>
 
 <style lang="scss" scoped>
@@ -83,7 +98,7 @@
 
 .hero-links {
     display: flex;
-    gap: 1.2rem;
+    gap: 2.4rem;
     align-items: center;
 }
 </style>

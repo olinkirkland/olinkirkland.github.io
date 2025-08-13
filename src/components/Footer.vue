@@ -110,10 +110,15 @@
 
                 <!-- Social links -->
                 <div class="flex">
-                    <a href="https://github.com/olinkirkland" target="_blank">
+                    <a
+                        class="icon"
+                        href="https://github.com/olinkirkland"
+                        target="_blank"
+                    >
                         <i class="icon fab fa-github"></i>
                     </a>
                     <a
+                        class="icon"
                         href="https://linkedin.com/in/olin-kirkland"
                         target="_blank"
                     >

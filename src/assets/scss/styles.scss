@@ -3,6 +3,12 @@
     font-size: 1.6rem;
 }
 
+span {
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+
 html,
 body {
     /* Disables pull-to-refresh and overscroll glow effect.
@@ -56,7 +62,8 @@ h6 {
     text-transform: uppercase;
 }
 
-.link {
+a.link,
+button.link {
     display: inline-block;
     width: fit-content;
     color: var(--accent-1);
@@ -64,9 +71,13 @@ h6 {
     border-bottom: 1px dashed currentColor;
 }
 
-.icon {
-    font-size: 2.4rem;
-    color: var(--surface);
+// a.icon or button.icon
+a.icon,
+button.icon {
+    i {
+        font-size: 2.4rem;
+        color: var(--surface);
+    }
 }
 
 .link,
