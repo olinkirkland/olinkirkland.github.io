@@ -1,17 +1,17 @@
 <template>
     <div class="timeline-background">
         <section>
-            <div v-for="(entry, index) in timelineEntries" :key="index">
-                <TimelineBlock
-                    :index="index"
-                    :dateStart="entry.dateStart"
-                    :dateEnd="entry.dateEnd"
-                    :location="entry.location"
-                    :company="entry.company"
-                    :position="entry.position"
-                    :description="entry.description"
-                />
-            </div>
+            <TimelineBlock
+                v-for="(entry, index) in timelineEntries"
+                :index="index"
+                :dateStart="entry.dateStart"
+                :dateEnd="entry.dateEnd"
+                :location="entry.location"
+                :company="entry.company"
+                :position="entry.position"
+                :description="entry.description"
+                :link="entry.link"
+            />
         </section>
     </div>
 </template>
@@ -24,36 +24,39 @@ const timelineEntries = [
         dateStart: 'September 2015',
         dateEnd: 'May 2018',
         location: 'Houston, Texas, United States',
-        company: 'Paul Bernhard Exhibit Design and Consulting',
+        company: 'Paul Bernhard Exhibits',
         position: 'Application Developer',
         description: [
             'Built museum touchscreen apps and kiosks',
             'Created Texas energy data visualizations',
             'Met with curators for requirements and prototypes'
-        ]
+        ],
+        link: 'https://www.pbe.design/'
     },
     {
         dateStart: 'May 2018',
         dateEnd: 'April 2020',
         location: 'Regensburg, Bavaria, Germany',
-        company: 'Dallmeier GmbH',
+        company: 'Dallmeier',
         position: 'Application Developer',
         description: [
             'Built modular dashboard visualizations',
             'Developed secure backup software module'
-        ]
+        ],
+        link: 'https://www.dallmeier.com/'
     },
     {
         dateStart: 'April 2020',
         dateEnd: 'January 2022',
         location: 'Cologne, North Rhine-Westphalia, Germany',
-        company: 'Bright Future GmbH',
+        company: 'Bright Future',
         position: 'Game Developer',
         description: [
             'Added features to Rail Nation MMO',
             'Ported game to Haxe for browser and mobile',
             'Built tools for faster content integration'
-        ]
+        ],
+        link: 'https://www.traviangames.com/en/bright-future'
     },
     {
         dateStart: 'June 2022',
@@ -65,19 +68,21 @@ const timelineEntries = [
             'Built A/B tests and personalization campaigns',
             'Estimated and scoped client requests',
             'Resolved platform technical issues'
-        ]
+        ],
+        link: 'https://www.abtasty.com/'
     },
     {
         dateStart: 'June 2023',
         dateEnd: 'Present',
         location: 'Lindlar, North Rhine-Westphalia, Germany',
-        company: 'Brück Electronic GmbH',
+        company: 'Brück Electronic',
         position: 'Full-stack Web Developer',
         description: [
             'Built web apps for automation systems',
             'Developed real-time dashboards and schedulers',
             'Fixed critical bugs in Node.js systems'
-        ]
+        ],
+        link: 'https://www.beg-luxomat.com/'
     }
 ].reverse();
 </script>

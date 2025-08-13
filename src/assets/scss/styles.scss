@@ -64,6 +64,7 @@ h6 {
 
 a.link,
 button.link {
+    cursor: pointer;
     display: inline-block;
     width: fit-content;
     color: var(--accent-1);
@@ -71,17 +72,9 @@ button.link {
     border-bottom: 1px dashed currentColor;
 }
 
-// a.icon or button.icon
-a.icon,
-button.icon {
-    i {
-        font-size: 2.4rem;
-        color: var(--surface);
-    }
-}
-
 .link,
 .icon {
+    cursor: pointer;
     &:hover {
         filter: brightness(0.8);
     }
@@ -163,7 +156,7 @@ i {
 }
 
 section {
-    padding: 2rem;
+    padding: 2rem 4rem;
     margin: 0 auto;
     max-width: 120rem;
     width: 100%;

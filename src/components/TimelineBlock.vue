@@ -1,7 +1,19 @@
 <template>
     <div class="timeline-block">
         <div class="company-location-and-dates">
-            <h2>{{ company }}</h2>
+            <div class="flex">
+                <h2>
+                    {{ company }}
+                </h2>
+                <a
+                    class="icon"
+                    :href="link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i class="fas fa-link"></i>
+                </a>
+            </div>
             <p>{{ location }}</p>
             <p class="muted">{{ dateStart }} - {{ dateEnd }}</p>
         </div>
@@ -34,6 +46,7 @@ const props = defineProps<{
     company: string;
     position: string;
     description: string[];
+    link: string;
 }>();
 
 const color = computed(() => {
@@ -41,7 +54,8 @@ const color = computed(() => {
         'var(--accent-1)',
         'var(--accent-2)',
         'var(--accent-3)',
-        'var(--accent-4)'
+        'var(--accent-4)',
+        'var(--accent-5)'
     ];
     return colors[props.index % colors.length];
 });
@@ -63,6 +77,20 @@ const color = computed(() => {
 .company-location-and-dates,
 .position-and-descriptions {
     padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.timeline-block:last-child {
+    .position-and-descriptions,
+    .company-location-and-dates {
+        padding-bottom: unset;
+    }
+
+    .timeline-line {
+        display: none;
+    }
 }
 
 .timeline-graphic {
@@ -94,14 +122,52 @@ const color = computed(() => {
     }
 
     > .timeline-line {
-        border-left: 1px dashed var(--border);
+        border-right: 1px dashed var(--border);
+        width: 1px;
         position: absolute;
-        top: 0;
+        top: 0.4rem;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
     }
 }
+
+.company-location-and-dates > .flex {
+    align-items: center;
+}
+
+.icon {
+    color: var(--body);
+    font-size: 2.2rem;
+}
 </style>
 
+<!-- Mobile queries -->
+<style lang="scss" scoped>
+@media (max-width: 768px) {
+    .timeline-block {
+        display: grid;
+        grid-template-areas:
+            'timeline-graphic company-location-and-dates'
+            'timeline-graphic position-and-descriptions';
+        grid-template-columns: 4rem 1fr;
+        grid-template-rows: auto 1fr;
+        gap: 1rem;
+    }
 
+    .company-location-and-dates {
+        padding-bottom: unset;
+    }
+
+    .position-and-descriptions h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 0.4rem;
+    }
+
+    .timeline-graphic {
+        grid-area: timeline-graphic;
+        align-self: stretch; /* Ensures it fills the full column height */
+    }
+}
+</style>

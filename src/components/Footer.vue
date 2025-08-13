@@ -187,6 +187,11 @@ footer section {
         }
     }
 }
+
+.icon {
+    color: var(--surface);
+    font-size: 2.4rem;
+}
 </style>
 
 <!-- Mobile queries -->
