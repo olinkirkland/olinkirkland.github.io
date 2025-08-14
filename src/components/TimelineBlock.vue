@@ -3,7 +3,7 @@
         <div class="company-location-and-dates">
             <div class="flex">
                 <h2>
-                    {{ company }}
+                    <strong>{{ company }}</strong>
                 </h2>
                 <a
                     class="icon"
@@ -27,7 +27,11 @@
         <div class="position-and-descriptions">
             <h2>{{ position }}</h2>
             <ul>
-                <li v-for="(item, index) in description" :key="index">
+                <li
+                    v-for="(item, index) in description"
+                    :key="index"
+                    class="muted"
+                >
                     {{ item }}
                 </li>
             </ul>
@@ -64,22 +68,34 @@ const color = computed(() => {
 <style lang="scss" scoped>
 .timeline-block {
     display: grid;
-    grid-template-columns: 1fr 4rem 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr 2rem 1fr;
+    gap: 4rem;
 
     .position-and-descriptions ul {
         display: flex;
         flex-direction: column;
         gap: 0.4rem;
+        > li::before {
+            content: '●';
+            margin-right: 0.8rem;
+        }
     }
 }
 
 .company-location-and-dates,
 .position-and-descriptions {
-    padding-bottom: 4rem;
+    padding-bottom: 8rem;
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
+}
+
+.company-location-and-dates {
+    text-align: right;
+    > .flex {
+        justify-content: flex-end;
+        align-items: center; // Aligns company name and link icon
+    }
 }
 
 .timeline-block:last-child {
@@ -108,7 +124,7 @@ const color = computed(() => {
         transform: translateY(-25%);
         border-radius: 50%;
         background-color: var(--surface);
-        border: 1px dashed var(--border);
+        border: 1px solid var(--border);
     }
 
     > .timeline-dot {
@@ -122,7 +138,7 @@ const color = computed(() => {
     }
 
     > .timeline-line {
-        border-right: 1px dashed var(--border);
+        border-right: 1px solid var(--border);
         width: 1px;
         position: absolute;
         top: 0.4rem;
@@ -130,10 +146,6 @@ const color = computed(() => {
         left: 50%;
         transform: translateX(-50%);
     }
-}
-
-.company-location-and-dates > .flex {
-    align-items: center;
 }
 
 .icon {
@@ -146,6 +158,7 @@ const color = computed(() => {
 <style lang="scss" scoped>
 @media (max-width: 768px) {
     .timeline-block {
+        width: 100%;
         display: grid;
         grid-template-areas:
             'timeline-graphic company-location-and-dates'

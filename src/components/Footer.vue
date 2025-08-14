@@ -9,7 +9,7 @@
                 </p>
 
                 <Button class="dark" @click="$emit('scrollToTop')">
-                    <i class="icon fas fa-arrow-up"></i>
+                    <i class="fas fa-arrow-up"></i>
                     <span>Back to top</span>
                 </Button>
             </div>

@@ -19,6 +19,11 @@ body {
 }
 
 // Typography
+strong,
+em {
+    font-size: inherit;
+}
+
 h1,
 h2,
 h3,

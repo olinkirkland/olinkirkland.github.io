@@ -1,17 +1,19 @@
 <template>
     <div class="timeline-background">
         <section>
-            <TimelineBlock
-                v-for="(entry, index) in timelineEntries"
-                :index="index"
-                :dateStart="entry.dateStart"
-                :dateEnd="entry.dateEnd"
-                :location="entry.location"
-                :company="entry.company"
-                :position="entry.position"
-                :description="entry.description"
-                :link="entry.link"
-            />
+            <div>
+                <TimelineBlock
+                    v-for="(entry, index) in timelineEntries"
+                    :index="index"
+                    :dateStart="entry.dateStart"
+                    :dateEnd="entry.dateEnd"
+                    :location="entry.location"
+                    :company="entry.company"
+                    :position="entry.position"
+                    :description="entry.description"
+                    :link="entry.link"
+                />
+            </div>
         </section>
     </div>
 </template>
@@ -27,9 +29,8 @@ const timelineEntries = [
         company: 'Paul Bernhard Exhibits',
         position: 'Application Developer',
         description: [
-            'Built museum touchscreen apps and kiosks',
-            'Created Texas energy data visualizations',
-            'Met with curators for requirements and prototypes'
+            'Created museum touchscreen apps and kiosks',
+            'Procured requirements from museum staff'
         ],
         link: 'https://www.pbe.design/'
     },
@@ -52,9 +53,8 @@ const timelineEntries = [
         company: 'Bright Future',
         position: 'Game Developer',
         description: [
-            'Added features to Rail Nation MMO',
+            'Developed features for a live-service game',
             'Ported game to Haxe for browser and mobile',
-            'Built tools for faster content integration'
         ],
         link: 'https://www.traviangames.com/en/bright-future'
     },
@@ -63,11 +63,10 @@ const timelineEntries = [
         dateEnd: 'June 2023',
         location: 'Cologne, North Rhine-Westphalia, Germany',
         company: 'AB Tasty',
-        position: 'Support Engineer (Front-end)',
+        position: 'Front-end Engineer',
         description: [
             'Built A/B tests and personalization campaigns',
-            'Estimated and scoped client requests',
-            'Resolved platform technical issues'
+            'Estimated and scoped client requests'
         ],
         link: 'https://www.abtasty.com/'
     },
@@ -78,9 +77,8 @@ const timelineEntries = [
         company: 'Brück Electronic',
         position: 'Full-stack Web Developer',
         description: [
-            'Built web apps for automation systems',
             'Developed real-time dashboards and schedulers',
-            'Fixed critical bugs in Node.js systems'
+            'Fixed critical bugs in legacy systems'
         ],
         link: 'https://www.beg-luxomat.com/'
     }
@@ -91,5 +89,10 @@ const timelineEntries = [
 .timeline-background {
     background-color: var(--surface);
     padding: 2rem 0;
+}
+
+section {
+    display: flex;
+    justify-content: center;
 }
 </style>

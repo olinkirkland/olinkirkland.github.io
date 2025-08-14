@@ -15,7 +15,7 @@
             <div class="hero-links">
                 <!-- Download Resume -->
                 <Button class="light" @click="downloadResume">
-                    <i class="icon fas fa-arrow-down"></i>
+                    <i class="fas fa-arrow-down"></i>
                     <span>Resume (113 KB)</span>
                 </Button>
 
@@ -100,6 +100,11 @@ function downloadResume() {
     display: flex;
     gap: 2.4rem;
     align-items: center;
+}
+
+.icon {
+    color: var(--surface);
+    font-size: 2.4rem;
 }
 </style>
 
