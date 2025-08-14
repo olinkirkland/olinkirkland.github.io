@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-        <header>
+        <header class="muted">
             <slot name="header"></slot>
         </header>
         <div class="content">
@@ -15,7 +15,7 @@
 .card {
     background-color: var(--background);
     border-radius: 7px;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-sm);
     padding: 2.4rem;
 
     display: flex;
@@ -24,7 +24,6 @@
 
     > header {
         text-align: center;
-        opacity: 0.2;
         :deep(i) {
             font-size: 2rem;
         }

@@ -6,9 +6,8 @@
             <About />
             <ContactBanner />
             <Timeline />
-            <Skills />
             <Projects />
-            <CertificatesEducation />
+            <Skills />
         </div>
         <Footer @scrollToTop="scrollToTop" />
     </div>
@@ -16,7 +15,6 @@
 
 <script setup lang="ts">
 import About from './components/About.vue';
-import CertificatesEducation from './components/CertificatesEducation.vue';
 import ContactBanner from './components/ContactBanner.vue';
 import Footer from './components/Footer.vue';
 import Hero from './components/Hero.vue';

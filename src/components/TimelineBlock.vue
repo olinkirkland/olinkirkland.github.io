@@ -199,7 +199,7 @@ const color = computed(() => {
             max-width: 20rem;
             > li {
                 display: inline !important;
-                font-size: 1rem;
+                font-size: 1.2rem;
                 &::before {
                     margin-left: 0.4rem !important;
                     margin-right: 0.4rem !important;
