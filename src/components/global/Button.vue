@@ -48,6 +48,10 @@ button {
     border-bottom: 2px solid transparent;
     transition: all 0.1s;
     white-space: nowrap;
+
+    i {
+        font-size: 1rem;
+    }
 }
 
 .button-shadow {

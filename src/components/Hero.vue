@@ -16,7 +16,7 @@
                 <!-- Download Resume -->
                 <Button class="light" @click="downloadResume">
                     <i class="fas fa-arrow-down"></i>
-                    <span>My Resume</span>
+                    <span>Download my Resume</span>
                 </Button>
 
                 <div class="flex">

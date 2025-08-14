@@ -13,29 +13,29 @@
                 <span>{{ skill }}</span>
             </li>
         </ul>
-        <ul class="certificates-list">
-            <li v-for="certificate in certificates" :key="certificate.name">
-                <Card @click="onClickCertificate(certificate)">
-                    <template #header>
-                        <div class="flex">
-                            <img
-                                :src="`/assets/images/certificate-badges/${certificate.badgeIcon}`"
-                                alt="Certificate Badge"
-                            />
-                            <p>
-                                <strong>{{ certificate.name }}</strong>
-                            </p>
-                        </div>
-                    </template>
-                    <template #content>
-                        <h6>
-                            {{ months[certificate.date.month] }}
-                            {{ certificate.date.year }}
-                        </h6>
-                    </template>
-                </Card>
-            </li>
-        </ul>
+        <div class="certificates-carousel">
+            <ul class="certificates-list">
+                <li v-for="certificate in certificates" :key="certificate.name">
+                    <Card @click="onClickCertificate(certificate)">
+                        <template #header>
+                            <div class="flex">
+                                <img
+                                    :src="`/assets/images/certificate-badges/${certificate.badgeIcon}`"
+                                    alt="Certificate Badge"
+                                />
+                                <p>{{ certificate.name }}</p>
+                            </div>
+                        </template>
+                        <template #content>
+                            <h6 class="muted">
+                                {{ months[certificate.date.month] }}
+                                {{ certificate.date.year }}
+                            </h6>
+                        </template>
+                    </Card>
+                </li>
+            </ul>
+        </div>
     </section>
 </template>
 
@@ -142,14 +142,14 @@ const certificates = [
     },
     {
         badgeIcon: 'udemy.png',
-        name: 'Vue - The Complete Guide (incl. Router & Composition API)',
+        name: 'Vue - The Complete Guide (Router, Composition API)',
         date: {
             month: 6,
             year: 2023
         },
         url: 'https://www.udemy.com/certificate/UC-a00238ce-da76-4ebd-812e-69eb91a8e104/'
     }
-];
+].reverse();
 const months = [
     'January',
     'February',
@@ -166,16 +166,16 @@ const months = [
 ];
 
 function onClickCertificate(certificate: { url?: string; file?: string }) {
-    // Either open the URL in a new tab or download the file
+    // Either open the URL in a new tab or open the file in a new tab
     if (certificate.url) {
         window.open(certificate.url, '_blank');
     } else if (certificate.file) {
         const link = document.createElement('a');
-        link.href = `/certificates/${certificate.file}`;
-        link.download = certificate.file;
-        document.body.appendChild(link);
+        link.href = `/assets/files/${certificate.file}`;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
         link.click();
-        document.body.removeChild(link);
+        link.remove();
     }
 }
 </script>
@@ -224,22 +224,80 @@ ul.certificates-list {
         > header {
             > div {
                 display: flex;
+                flex-direction: column;
                 align-items: center;
-                text-align: left;
-                gap: 1rem;
                 > img {
                     height: 3.2rem;
                     min-width: 3.2rem;
                     object-fit: contain;
                 }
+                > p {
+                    text-align: center;
+                }
             }
         }
         :deep(.content) {
             flex: 1;
+            padding-top: 1rem;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            opacity: 0.4;
+        }
+    }
+}
+</style>
+
+<!-- Mobile queries -->
+<style lang="scss" scoped>
+@media (max-width: 768px) {
+    ul.skills-list {
+        li {
+            padding: 0.4rem 1rem;
+            font-size: 1.2rem;
+        }
+    }
+
+    .certificates-carousel {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        display: flex;
+        overflow-x: auto;
+        gap: 1rem;
+        padding: 2rem 0;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    :deep(.certificates-list) {
+        display: flex !important;
+        flex-wrap: nowrap;
+        padding: 0 2rem;
+        > li {
+            flex: 0 0 auto;
+            scroll-snap-align: center;
+            width: 24rem;
+            min-width: 24rem;
+            .card {
+                overflow: hidden;
+                > header {
+                    overflow: hidden;
+                    > div {
+                        flex-direction: column;
+                        p {
+                            font-size: 1.4rem;
+                        }
+                        > img {
+                            height: 2rem;
+                            min-width: 2rem;
+                        }
+                    }
+                }
+            }
         }
     }
 }

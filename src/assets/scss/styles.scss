@@ -1,6 +1,7 @@
 * {
     font-family: var(--body-font);
     font-size: 1.6rem;
+    line-height: 1.6;
 }
 
 span {
@@ -107,11 +108,11 @@ pre {
 
 // Utility
 .muted {
-    opacity: 0.5;
+    opacity: 0.4;
 }
 
 .instructive {
-    opacity: 0.5;
+    opacity: 0.4;
     font-style: italic;
 }
 

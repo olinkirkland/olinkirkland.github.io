@@ -177,7 +177,7 @@ footer section {
 
 .copyright {
     background-color: var(--accent-1);
-    padding: 1rem;
+    padding: 0.8rem;
 
     section {
         padding: 0;

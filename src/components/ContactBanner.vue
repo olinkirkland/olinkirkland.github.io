@@ -7,7 +7,7 @@
                     class="accent-1 full-width-mobile"
                 >
                     <i class="fas fa-arrow-down"></i>
-                    <span>My Resume</span>
+                    <span>Download my Resume</span>
                 </Button>
 
                 <Button @click="onClickLinkedin" class="full-width-mobile">

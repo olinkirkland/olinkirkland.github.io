@@ -118,7 +118,7 @@ const color = computed(() => {
 
     > .timeline-dot-background {
         position: absolute;
-        top: 1rem;
+        top: 0.8rem;
         width: 3.2rem;
         height: 3.2rem;
         transform: translateY(-25%);
@@ -130,7 +130,7 @@ const color = computed(() => {
     > .timeline-dot {
         // Colored dot
         position: absolute;
-        top: 1rem;
+        top: 0.85rem;
         width: 1.6rem;
         height: 1.6rem;
         border-radius: 50%;
