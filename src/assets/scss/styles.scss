@@ -161,9 +161,30 @@ i {
 }
 
 section {
-    padding: 2rem 4rem;
+    padding: 8rem 4rem;
     margin: 0 auto;
     max-width: 120rem;
     width: 100%;
     box-sizing: border-box;
+}
+
+// Color classes
+.color-accent-1 {
+    color: var(--accent-1);
+}
+
+.color-accent-2 {
+    color: var(--accent-2);
+}
+
+.color-accent-3 {
+    color: var(--accent-3);
+}
+
+.color-accent-4 {
+    color: var(--accent-4);
+}
+
+.color-accent-5 {
+    color: var(--accent-5);
 }

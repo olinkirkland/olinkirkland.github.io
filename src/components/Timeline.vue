@@ -25,7 +25,7 @@ const timelineEntries = [
     {
         dateStart: 'September 2015',
         dateEnd: 'May 2018',
-        location: 'Houston, Texas, United States',
+        location: 'Houston, United States',
         company: 'Paul Bernhard Exhibits',
         position: 'Application Developer',
         description: [
@@ -37,7 +37,7 @@ const timelineEntries = [
     {
         dateStart: 'May 2018',
         dateEnd: 'April 2020',
-        location: 'Regensburg, Bavaria, Germany',
+        location: 'Regensburg, Germany',
         company: 'Dallmeier',
         position: 'Application Developer',
         description: [
@@ -49,19 +49,19 @@ const timelineEntries = [
     {
         dateStart: 'April 2020',
         dateEnd: 'January 2022',
-        location: 'Cologne, North Rhine-Westphalia, Germany',
+        location: 'Cologne, Germany',
         company: 'Bright Future',
         position: 'Game Developer',
         description: [
             'Developed features for a live-service game',
-            'Ported game to Haxe for browser and mobile',
+            'Ported game to Haxe for browser and mobile'
         ],
         link: 'https://www.traviangames.com/en/bright-future'
     },
     {
         dateStart: 'June 2022',
         dateEnd: 'June 2023',
-        location: 'Cologne, North Rhine-Westphalia, Germany',
+        location: 'Cologne, Germany',
         company: 'AB Tasty',
         position: 'Front-end Engineer',
         description: [
@@ -73,7 +73,7 @@ const timelineEntries = [
     {
         dateStart: 'June 2023',
         dateEnd: 'Present',
-        location: 'Lindlar, North Rhine-Westphalia, Germany',
+        location: 'Lindlar, Germany',
         company: 'Brück Electronic',
         position: 'Full-stack Web Developer',
         description: [

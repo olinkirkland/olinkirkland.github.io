@@ -2,7 +2,7 @@
     <div class="hero">
         <div class="hero-background"></div>
         <section class="hero-content">
-            <h1>Olin Kirkland.</h1>
+            <h1>Olin Kirkland</h1>
             <Marker />
             <div>
                 <h2>Web-developer based in Albany, New York.</h2>
@@ -16,7 +16,7 @@
                 <!-- Download Resume -->
                 <Button class="light" @click="downloadResume">
                     <i class="fas fa-arrow-down"></i>
-                    <span>Resume (113 KB)</span>
+                    <span>My Resume</span>
                 </Button>
 
                 <div class="flex">
@@ -44,14 +44,7 @@
 </template>
 
 <script setup lang="ts">
-function downloadResume() {
-    const link = document.createElement('a');
-    link.href = '/assets/files/resume-en.pdf';
-    link.download = 'olin-kirkland-resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-}
+import downloadResume from '../download-resume';
 </script>
 
 <style lang="scss" scoped>
@@ -108,17 +101,28 @@ function downloadResume() {
 }
 </style>
 
+<!-- Mobile queries -->
 <style lang="scss" scoped>
-.hero {
+@media (max-width: 768px) {
     .hero-content {
-        padding: 3.2rem;
+        padding: 2rem;
+        text-align: center;
 
         h1 {
-            font-size: 4.8rem;
+            font-size: 4rem;
         }
 
         h2 {
-            font-size: 2.4rem;
+            font-size: 1.8rem;
+        }
+    }
+
+    .hero-links {
+        flex-direction: column;
+        align-items: center;
+
+        .icon {
+            margin-bottom: 1rem;
         }
     }
 }

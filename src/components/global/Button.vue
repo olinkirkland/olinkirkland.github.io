@@ -20,6 +20,17 @@ const props = defineProps({
 .button-container {
     position: relative;
     width: fit-content;
+
+    &.full-width-mobile {
+        width: 100%;
+        > button {
+            width: 100%;
+            justify-content: center;
+        }
+        > .button-shadow {
+            width: 100%;
+        }
+    }
 }
 
 button {
@@ -36,6 +47,7 @@ button {
     border-radius: 5px;
     border-bottom: 2px solid transparent;
     transition: all 0.1s;
+    white-space: nowrap;
 }
 
 .button-shadow {
@@ -48,7 +60,7 @@ button {
 }
 
 button:hover {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-sm);
     transform: translateY(-0.1rem);
 }
 

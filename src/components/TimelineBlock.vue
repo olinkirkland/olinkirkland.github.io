@@ -168,14 +168,47 @@ const color = computed(() => {
         gap: 1rem;
     }
 
-    .company-location-and-dates {
-        padding-bottom: unset;
-    }
+    .company-location-and-dates,
+    .position-and-descriptions {
+        text-align: right;
 
-    .position-and-descriptions h2 {
-        font-size: 2rem;
-        font-weight: bold;
-        margin-bottom: 0.4rem;
+        &.company-location-and-dates {
+            padding-bottom: unset;
+        }
+
+        .flex {
+            gap: 0.8rem;
+            justify-content: flex-end;
+            align-items: flex-end;
+            a > i {
+                font-size: 1.2rem;
+            }
+        }
+
+        h2 {
+            font-size: 1.6rem;
+        }
+
+        > p {
+            font-size: 1.2rem;
+        }
+
+        > ul {
+            display: block !important;
+            line-height: 1;
+            max-width: 20rem;
+            > li {
+                display: inline !important;
+                font-size: 1rem;
+                &::before {
+                    margin-left: 0.4rem !important;
+                    margin-right: 0.4rem !important;
+                }
+                &:first-of-type::before {
+                    content: '';
+                }
+            }
+        }
     }
 
     .timeline-graphic {

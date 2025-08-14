@@ -150,6 +150,8 @@ defineEmits<{ (e: 'scrollToTop'): void }>();
 <style lang="scss" scoped>
 footer {
     background-color: var(--surface-inverted);
+    box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.25);
+    padding: 4rem 0;
 }
 
 footer section {
