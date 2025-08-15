@@ -6,7 +6,7 @@
     />
     <section>
         <h2>
-            I bring a
+            I offer a
             <strong class="color-accent-4">unique perspective</strong> to
             application design through my background in
             <strong class="color-accent-4">museums</strong> and

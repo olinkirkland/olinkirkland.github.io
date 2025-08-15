@@ -1,8 +1,7 @@
 <template>
     <section>
         <h2>
-            I have
-            {{ yearsSince2015 }} years of professional software development
+            {{ yearsSince2015 }} years of software development
             <strong class="color-accent-4">experience</strong>.
         </h2>
         <ul class="skills-list">
@@ -179,6 +178,8 @@ function onClickCertificate(certificate: { url?: string; file?: string }) {
 
 <style lang="scss" scoped>
 section {
+    padding-top: 0;
+    padding-bottom: 8rem;
     display: flex;
     flex-direction: column;
     gap: 4rem;
