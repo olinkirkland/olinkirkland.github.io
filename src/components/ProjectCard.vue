@@ -1,6 +1,7 @@
 <template>
     <Card>
         <template #header>
+            <img :src="project.images[0]" :alt="project.name" />
             <div class="flex spread">
                 <h3>{{ project.name }}</h3>
                 <h3 class="muted">{{ project.year }}</h3>
@@ -60,6 +61,19 @@ function getTagImage(tag: string) {
     flex-direction: column;
     ul.tags {
         padding: 1rem 0;
+    }
+}
+
+:deep(header) {
+    padding: 0 !important;
+    img {
+        width: 100%;
+        height: 20rem;
+        object-fit: cover;
+        object-position: top;
+    }
+    > div {
+        padding: 0 2.4rem;
     }
 }
 

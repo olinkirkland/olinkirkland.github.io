@@ -1,5 +1,10 @@
 <template>
     <footer>
+        <Wave
+            foreground-color="surface-inverted"
+            line-color="surface-inverted"
+            position="top"
+        />
         <section>
             <div class="footer-content">
                 <h3>About Me</h3>
@@ -144,14 +149,16 @@
 </template>
 
 <script setup lang="ts">
+import Wave from './Wave.vue';
+
 defineEmits<{ (e: 'scrollToTop'): void }>();
 </script>
 
 <style lang="scss" scoped>
 footer {
+    position: relative;
     background-color: var(--surface-inverted);
-    box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.25);
-    padding: 4rem 0;
+    margin-top: 8rem;
 }
 
 footer section {
@@ -159,7 +166,7 @@ footer section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    padding: 2rem;
+    padding: 4rem 2rem;
 }
 
 .footer-content {

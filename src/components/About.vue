@@ -1,4 +1,9 @@
 <template>
+    <Wave
+        foreground-color="background"
+        line-color="background"
+        position="top"
+    />
     <section>
         <h2>
             I bring a
@@ -14,7 +19,7 @@
                 </template>
                 <template #content>
                     <p>
-                        I've built all sorts of things — from
+                        I've built all sorts of things, from
                         <strong>museum exhibits</strong> and automation
                         platforms to <strong>mobile games</strong>.<br /><br />
                         In my free time, I like creating new apps just for fun
@@ -28,8 +33,9 @@
                 </template>
                 <template #content>
                     <p>
-                        My stack covers the usual web-dev essentials, with
-                        a focus on semantic HTML, TypeScript, Node.js, and Vue.js. <br /><br />
+                        My stack covers the usual web-dev essentials, with a
+                        focus on semantic HTML, TypeScript, Node.js, and Vue.js.
+                        <br /><br />
                         I'm fluent in both English and German, and have had the
                         chance to live and work in both the United States and
                         Germany.
@@ -54,7 +60,9 @@
     </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Wave from './Wave.vue';
+</script>
 
 <style lang="scss" scoped>
 section {

@@ -1,5 +1,11 @@
 <template>
     <div class="contact-banner">
+        <Wave
+            foreground-color="accent-4"
+            has-line
+            line-color="accent-4"
+            position="top"
+        />
         <section>
             <div class="flex center">
                 <Button
@@ -21,11 +27,17 @@
                 </Button>
             </div>
         </section>
+        <Wave
+            foreground-color="accent-4"
+            position="bottom"
+            line-color="accent-4"
+        />
     </div>
 </template>
 
 <script setup lang="ts">
 import downloadResume from '../download-resume';
+import Wave from './Wave.vue';
 
 function onClickLinkedin() {
     window.open('https://www.linkedin.com/in/olin-kirkland', '_blank');
@@ -38,13 +50,12 @@ function onClickEmail() {
 
 <style lang="scss" scoped>
 .contact-banner {
+    position: relative;
     background-color: var(--accent-4);
-    padding: 2.4rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25),
-        inset 0 -5px 15px rgba(0, 0, 0, 0.25);
+    margin-bottom: 4rem;
 
     section {
-        padding: 0;
+        padding: 1rem;
         display: flex;
         justify-content: center;
         > div {

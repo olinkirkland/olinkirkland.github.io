@@ -1,5 +1,6 @@
 <template>
     <div class="timeline-background">
+        <Wave foregroundColor="surface" line-color="surface" position="top" />
         <section>
             <div>
                 <TimelineBlock
@@ -20,6 +21,7 @@
 
 <script setup lang="ts">
 import TimelineBlock from './TimelineBlock.vue';
+import Wave from './Wave.vue';
 
 const timelineEntries = [
     {
@@ -89,6 +91,8 @@ const timelineEntries = [
 .timeline-background {
     background-color: var(--surface);
     padding: 2rem 0;
+    margin-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 section {

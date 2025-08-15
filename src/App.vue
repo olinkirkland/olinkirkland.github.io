@@ -4,10 +4,10 @@
         <div class="sections">
             <Hero />
             <About />
-            <ContactBanner />
-            <Timeline />
-            <Projects />
             <Skills />
+            <Timeline />
+            <ContactBanner />
+            <Projects />
         </div>
         <Footer @scrollToTop="scrollToTop" />
     </div>

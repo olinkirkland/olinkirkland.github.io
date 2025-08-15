@@ -2,8 +2,8 @@
     <section>
         <h2>
             My
-            <strong class="color-accent-4">personal projects</strong> are where I
-            experiment and build just for the
+            <strong class="color-accent-4">personal projects</strong> are where
+            I experiment and build just for the
             <strong class="color-accent-4">fun</strong> of it.
         </h2>
         <div class="projects-carousel">
@@ -21,6 +21,19 @@ import ProjectCard from './ProjectCard.vue';
 
 const projects = [
     {
+        name: 'Loot Dragon',
+        description:
+            'Loot Dragon is an item browser for the <a href="https://paizo.com/pathfinder" target="_blank">Pathfinder 2e</a> roleplaying game. It allows users to search for items, view their details, and filter by various criteria. Users can link the app to local PDFs of various game books, allowing them to view items in context.<br/><br/>A backend API lets users create accounts to save their favorite items across devices.',
+        tags: ['typescript', 'vue', 'sass', 'node', 'express', 'mongodb'],
+        link: 'https://olinkirk.land/lootdragon/',
+        linkType: 'demo',
+        images: [
+            '/assets/images/projects/loot-dragon/loot-dragon-1.png',
+            '/assets/images/projects/loot-dragon/loot-dragon-2.png'
+        ],
+        year: 2023
+    },
+    {
         name: 'Scribbles',
         description:
             'In 2023, I began writing a series of one-page tabletop adventures. When they got a bit of traction on Reddit, I decided to create a website to host them all in one place. I wrote a couple scripts to generate markdown for my Reddit posts and to create images of the PDFs to post them on social media.<br/><br/>There are now about thirty adventures available on the site.',
@@ -37,7 +50,7 @@ const projects = [
         name: 'Online in the Dark',
         description:
             'My first attempt at creating a Virtual Tabletop for the roleplaying game <a href="https://bladesinthedark.com/" target="_blank">Blades in the Dark</a>. This project was a learning experience, and I later moved on to Scoundry, which is a more polished version of this idea with a narrower scope.<br/></br>Online in the Dark featured a fully functional shared <em>party mode</em> in which players can see each other\'s character sheets and interact with them in real-time.',
-        tags: ['typescript', 'vue', 'sass', 'node', 'express'],
+        tags: ['typescript', 'vue', 'sass', 'node', 'express', 'mongodb'],
         link: 'https://github.com/olinkirkland/online-in-the-dark',
         linkType: 'github-source',
         images: [
@@ -92,7 +105,7 @@ section {
 ul.projects-list {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 
     > li {

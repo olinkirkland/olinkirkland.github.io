@@ -1,19 +1,16 @@
 <template>
     <section>
         <h2>
-            <strong class="color-accent-4">Skills</strong> and Proficiencies
-        </h2>
-        <p>
             I have
-            <strong class="color-accent-4">{{ yearsSince2015 }} years</strong>
-            of professional software development experience.
-        </p>
+            {{ yearsSince2015 }} years of professional software development
+            <strong class="color-accent-4">experience</strong>.
+        </h2>
         <ul class="skills-list">
             <li v-for="skill in skills">
                 <span>{{ skill }}</span>
             </li>
         </ul>
-        <div class="certificates-carousel">
+        <!-- <div class="certificates-carousel">
             <ul class="certificates-list">
                 <li v-for="certificate in certificates" :key="certificate.name">
                     <Card @click="onClickCertificate(certificate)">
@@ -35,7 +32,7 @@
                     </Card>
                 </li>
             </ul>
-        </div>
+        </div> -->
     </section>
 </template>
 
