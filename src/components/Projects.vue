@@ -1,6 +1,11 @@
 <template>
     <section>
-        <h2>Personal <strong class="color-accent-4">Projects</strong></h2>
+        <h2>
+            My
+            <strong class="color-accent-4">personal projects</strong> are where I
+            experiment and build just for the
+            <strong class="color-accent-4">fun</strong> of it.
+        </h2>
         <div class="projects-carousel">
             <ul class="projects-list">
                 <li v-for="project in projects" :key="project.name">
@@ -16,9 +21,22 @@ import ProjectCard from './ProjectCard.vue';
 
 const projects = [
     {
+        name: 'Scribbles',
+        description:
+            'In 2023, I began writing a series of one-page tabletop adventures. When they got a bit of traction on Reddit, I decided to create a website to host them all in one place. I wrote a couple scripts to generate markdown for my Reddit posts and to create images of the PDFs to post them on social media.<br/><br/>There are now about thirty adventures available on the site.',
+        tags: ['typescript', 'vue', 'sass'],
+        link: 'https://olinkirk.land/scribbles/',
+        linkType: 'demo',
+        images: [
+            '/assets/images/projects/scribbles/scribbles-1.png',
+            '/assets/images/projects/scribbles/scribbles-2.png'
+        ],
+        year: 2023
+    },
+    {
         name: 'Online in the Dark',
         description:
-            'My first attempt at creating a "Virtual Tabletop" (VTT) for the tabletop roleplaying game Blades in the Dark. This project was a learning experience, and I later moved on to Scoundry, which is a more polished version of this idea, albeit with a narrower scope. Online in the Dark features a fully functional shared "party" mode in which players can see each other\'s character sheets and interact with them in real-time. I\'ve since let the project go, but it remains a testament to my early work in this area.',
+            'My first attempt at creating a Virtual Tabletop for the roleplaying game <a href="https://bladesinthedark.com/" target="_blank">Blades in the Dark</a>. This project was a learning experience, and I later moved on to Scoundry, which is a more polished version of this idea with a narrower scope.<br/></br>Online in the Dark featured a fully functional shared <em>party mode</em> in which players can see each other\'s character sheets and interact with them in real-time.',
         tags: ['typescript', 'vue', 'sass', 'node', 'express'],
         link: 'https://github.com/olinkirkland/online-in-the-dark',
         linkType: 'github-source',
@@ -32,7 +50,7 @@ const projects = [
     {
         name: 'Scoundry',
         description:
-            "A character keeper web-app for the tabletop roleplaying game Blades in the Dark. I developed this application to help players manage their characters and track their progress. It features offline sharing via 64-bit encoding, allowing users to share their character data easily, and localization into several languages (provided by the game's community).",
+            'Scoundry is a web-app for the tabletop roleplaying game <a href="https://bladesinthedark.com/" target="_blank">Blades in the Dark</a>. I developed this application to help players manage their characters and track their progress.<br/><br/>It features offline sharing via 64-bit encoding, allowing users to share their character data easily, and localization into several languages (provided by the game\'s community).',
         tags: ['typescript', 'vue', 'sass'],
         link: 'https://scoundry.com',
         linkType: 'demo',
@@ -45,7 +63,7 @@ const projects = [
     {
         name: 'Grimoire',
         description:
-            'A web-based character keeper for the tabletop roleplaying game Grimwild. I developed this after finishing Scoundry, applying the lessons learned from that project. Grimoire features a more modern design, and has a much larger scope since the characters are much more complex. I implemented markov-chain name generation, 12 character classes, each with many customizable abilities, and custom reusable UI components.',
+            'Grimoire is a web-based character keeper for the tabletop roleplaying game <a href="https://www.drivethrurpg.com/en/product/507201/grimwild-free-edition" target="_blank">Grimwild</a>, that I developed after finishing Scoundry.<br/><br/>Grimoire features a more modern design, and has a much larger scope since the characters are much more complex. I implemented markov-chain name generation, 12 character classes, each with many customizable abilities, and custom reusable UI components.',
         tags: ['typescript', 'vue', 'sass'],
         link: 'https://olinkirk.land/grimoire',
         linkType: 'demo',
@@ -56,7 +74,7 @@ const projects = [
         ],
         year: 2025
     }
-];
+].reverse(); // Reverse the order to show the most recent projects first
 </script>
 
 <style lang="scss" scoped>
@@ -64,7 +82,9 @@ section {
     display: flex;
     flex-direction: column;
     gap: 4rem;
-    h2 {
+    > h2 {
+        max-width: 64rem;
+        margin: 0 auto;
         text-align: center;
     }
 }
@@ -79,6 +99,15 @@ ul.projects-list {
         > .card {
             height: 100%;
         }
+    }
+}
+</style>
+
+<!-- Mobile queries -->
+<style lang="scss" scoped>
+@media (max-width: 768px) {
+    ul.projects-list {
+        grid-template-columns: 1fr;
     }
 }
 </style>

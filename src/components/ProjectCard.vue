@@ -1,7 +1,7 @@
 <template>
     <Card>
-        <template #header
-            ><div class="flex spread">
+        <template #header>
+            <div class="flex spread">
                 <h3>{{ project.name }}</h3>
                 <h3 class="muted">{{ project.year }}</h3>
             </div>
@@ -13,18 +13,18 @@
                     <img :src="getTagImage(tag)" :alt="getTagImage(tag)" />
                 </li>
             </ul>
-            <p>{{ project.description }}</p>
+            <p v-html="project.description"></p>
             <div class="button-container">
                 <Button
                     v-if="project.linkType === 'demo'"
                     @click="onClickProject"
                 >
-                    <i class="fas fa-link"></i>
-                    <span>Demo</span>
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>Live Demo</span>
                 </Button>
                 <Button v-else @click="onClickProject">
-                    <i class="fas fa-code"></i>
-                    <span>Source</span>
+                    <i class="fab fa-github"></i>
+                    <span>Source Code</span>
                 </Button>
             </div>
         </template>
@@ -54,10 +54,8 @@ function getTagImage(tag: string) {
 </script>
 
 <style lang="scss" scoped>
-:deep(header) {
-}
-
 :deep(.content) {
+    flex: 1;
     display: flex;
     flex-direction: column;
     ul.tags {
@@ -80,6 +78,11 @@ ul.tags {
 }
 
 .button-container {
-    margin-left: auto;
+    // border: 1px solid red;
+    flex: 1;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 </style>

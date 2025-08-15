@@ -5,9 +5,9 @@
             <h1>Olin Kirkland</h1>
             <Marker />
             <div>
-                <h2>Web-developer based in Albany, New York.</h2>
+                <h2>Web-developer based in Albany, New York</h2>
                 <h2 class="muted">
-                    I write full-stack code for web-apps and games.
+                    Writing full-stack code for websites and applications
                 </h2>
             </div>
 
@@ -116,7 +116,7 @@ import downloadResume from '../download-resume';
 .hero-line {
     position: absolute;
     width: 100%;
-    min-width: 64rem;
+    min-width: 96rem;
     height: 10rem;
     transform: rotate(180deg);
 }

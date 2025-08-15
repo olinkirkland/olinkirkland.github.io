@@ -8,47 +8,45 @@
             <strong class="color-accent-4">games</strong>.
         </h2>
         <div class="card-container">
-            <Card class="accent-2">
+            <Card>
                 <template #header>
                     <i class="fas fa-object-group"></i>
                 </template>
                 <template #content>
                     <p>
-                        I have a proven track record in mobile, web and desktop
-                        development with a variety of projects ranging from
-                        <strong>museum exhibits</strong> to automation
-                        platforms, to
-                        <strong>mobile games</strong>.<br /><br />I build apps
-                        in my free time, staying up to date with libraries and
-                        trends.
+                        I've built all sorts of things — from
+                        <strong>museum exhibits</strong> and automation
+                        platforms to <strong>mobile games</strong>.<br /><br />
+                        In my free time, I like creating new apps just for fun
+                        and keeping up with the latest libraries and trends.
                     </p>
                 </template>
             </Card>
-            <Card class="accent-3">
+            <Card>
                 <template #header>
                     <i class="fas fa-code"></i>
                 </template>
                 <template #content>
                     <p>
-                        My tech stack includes typical web-dev fare with a focus
-                        on semantic HTML, <strong>TypeScript</strong>, Node.js
-                        on the backend, and Vue.js.<br /><br />I'm a native
-                        English and German speaker, and have worked and lived in
-                        both the United States and Germany.
+                        My stack covers the usual web-dev essentials, with
+                        a focus on semantic HTML, TypeScript, Node.js, and Vue.js. <br /><br />
+                        I'm fluent in both English and German, and have had the
+                        chance to live and work in both the United States and
+                        Germany.
                     </p>
                 </template>
             </Card>
-            <Card class="accent-4">
+            <Card>
                 <template #header>
                     <i class="fas fa-globe-americas"></i>
                 </template>
                 <template #content>
                     <p>
-                        Moving pixels is my occupation, but there's more to what
-                        drives me.<br /><br />In my leisure time, I play
-                        tabletop role-playing games and listen to comedy
-                        podcasts. I also enjoy spending time with my wife and
-                        cat.
+                        I move pixels for a living, but that's only part of what
+                        keeps me going.<br /><br />When I'm off the clock,
+                        you'll usually find me playing tabletop RPGs, laughing
+                        along to comedy podcasts, or just hanging out with my
+                        wife and our cat.
                     </p>
                 </template>
             </Card>
@@ -75,6 +73,10 @@ section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+
+    i {
+        opacity: 0.2;
+    }
 }
 </style>
 

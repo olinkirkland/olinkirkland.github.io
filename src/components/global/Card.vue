@@ -16,17 +16,24 @@
     background-color: var(--background);
     border-radius: 7px;
     box-shadow: var(--shadow-sm);
-    padding: 2.4rem;
+    overflow: hidden;
 
     display: flex;
     flex-direction: column;
     gap: 1rem;
 
     > header {
+        padding: 2.4rem;
+        padding-bottom: 0;
         text-align: center;
         :deep(i) {
             font-size: 2rem;
         }
+    }
+
+    > .content {
+        padding: 2.4rem;
+        padding-top: 0;
     }
 }
 </style>

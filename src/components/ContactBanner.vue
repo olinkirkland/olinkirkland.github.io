@@ -16,7 +16,7 @@
                 </Button>
 
                 <Button @click="onClickEmail" class="full-width-mobile">
-                    <i class="fas fa-envelope"></i>
+                    <i class="fas fa-paper-plane"></i>
                     <span>Contact Me</span>
                 </Button>
             </div>

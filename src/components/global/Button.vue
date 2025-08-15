@@ -50,7 +50,7 @@ button {
     white-space: nowrap;
 
     i {
-        font-size: 1rem;
+        font-size: 1.6rem;
     }
 }
 
