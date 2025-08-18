@@ -91,6 +91,7 @@ const color = computed(() => {
 }
 
 .company-location-and-dates {
+    width: 100%;
     text-align: right;
     > .flex {
         justify-content: flex-end;
