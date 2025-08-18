@@ -5,7 +5,7 @@
             <h1>Olin Kirkland</h1>
             <Marker />
             <div>
-                <h2>Web-developer based in Albany, New York</h2>
+                <h2>Web-developer based in Albany,&nbsp;New&nbsp;York</h2>
                 <h2 class="muted">
                     Writing full-stack code for websites and applications
                 </h2>
@@ -18,6 +18,10 @@
                     <i class="fas fa-arrow-down"></i>
                     <span>Download my Resume</span>
                 </Button>
+
+                <a class="link" href="mailto:me@olinkirk.land">
+                    me@olinkirk.land
+                </a>
 
                 <div class="flex">
                     <a
@@ -35,16 +39,20 @@
                         <i class="icon fab fa-linkedin"></i>
                     </a>
                 </div>
-                <a class="link" href="mailto:me@olinkirk.land">
-                    me@olinkirk.land
-                </a>
             </div>
         </section>
+        <Wave
+            background-color="transparent"
+            foreground-color="background"
+            line-color="background"
+            position="top"
+        />
     </div>
 </template>
 
 <script setup lang="ts">
 import downloadResume from '../download-resume';
+import Wave from './Wave.vue';
 </script>
 
 <style lang="scss" scoped>
@@ -53,10 +61,17 @@ import downloadResume from '../download-resume';
     overflow: hidden;
 }
 
+.wave-container {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+}
+
 .hero-background {
     position: relative;
     width: 100%;
-    min-height: 64rem;
+    min-height: 56rem;
     background: url('/assets/images/hero.jpg') no-repeat center center/cover;
 }
 

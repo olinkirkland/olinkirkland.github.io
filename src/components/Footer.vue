@@ -1,6 +1,7 @@
 <template>
     <footer>
         <Wave
+            background-color="background"
             foreground-color="surface-inverted"
             line-color="surface-inverted"
             position="top"

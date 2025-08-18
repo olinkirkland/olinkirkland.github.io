@@ -1,9 +1,4 @@
 <template>
-    <Wave
-        foreground-color="background"
-        line-color="background"
-        position="top"
-    />
     <section>
         <h2>
             I offer a
@@ -61,7 +56,6 @@
 </template>
 
 <script setup lang="ts">
-import Wave from './Wave.vue';
 </script>
 
 <style lang="scss" scoped>
@@ -112,7 +106,7 @@ section {
         & > * {
             flex: 0 0 auto;
             scroll-snap-align: center;
-            width: 80%;
+            width: 95%;
         }
     }
 }

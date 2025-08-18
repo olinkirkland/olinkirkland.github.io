@@ -180,26 +180,20 @@ const color = computed(() => {
             gap: 0.8rem;
             justify-content: flex-end;
             align-items: flex-end;
-            a > i {
-                font-size: 1.2rem;
-            }
         }
 
         h2 {
-            font-size: 1.6rem;
-        }
-
-        > p {
-            font-size: 1.2rem;
+            font-size: 2rem;
+            line-height: 1.2;
         }
 
         > ul {
             display: block !important;
-            line-height: 1;
+            line-height: 1.2;
             max-width: 20rem;
             > li {
                 display: inline !important;
-                font-size: 1.2rem;
+                font-size: 1.4rem;
                 &::before {
                     margin-left: 0.4rem !important;
                     margin-right: 0.4rem !important;

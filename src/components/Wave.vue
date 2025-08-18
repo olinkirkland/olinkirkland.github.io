@@ -1,5 +1,9 @@
 <template>
-    <div class="wave-container" :class="position || 'bottom'">
+    <div
+        class="wave-container"
+        :class="position || 'bottom'"
+        :style="{ backgroundColor: `var(--${backgroundColor})` }"
+    >
         <svg
             class="wave"
             version="1.1"
@@ -32,6 +36,7 @@
 
 <script setup lang="ts">
 const props = defineProps<{
+    backgroundColor: string;
     foregroundColor: string;
     lineColor?: string;
     position?: 'top' | 'bottom';
@@ -41,6 +46,8 @@ const props = defineProps<{
 <style lang="scss" scoped>
 .wave-container {
     position: relative;
+    height: 10rem;
+    overflow: hidden;
 }
 
 .top {

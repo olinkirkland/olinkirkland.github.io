@@ -1,6 +1,7 @@
 <template>
     <div class="contact-banner">
         <Wave
+            background-color="surface"
             foreground-color="accent-4"
             has-line
             line-color="accent-4"
@@ -28,6 +29,7 @@
             </div>
         </section>
         <Wave
+            background-color="background"
             foreground-color="accent-4"
             position="bottom"
             line-color="accent-4"

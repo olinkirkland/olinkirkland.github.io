@@ -1,6 +1,11 @@
 <template>
     <div class="timeline-background">
-        <Wave foregroundColor="surface" line-color="surface" position="top" />
+        <Wave
+            backgroundColor="background"
+            foregroundColor="surface"
+            line-color="surface"
+            position="top"
+        />
         <section>
             <div>
                 <TimelineBlock
@@ -90,7 +95,6 @@ const timelineEntries = [
 <style lang="scss" scoped>
 .timeline-background {
     background-color: var(--surface);
-    padding: 2rem 0;
     margin-top: 4rem;
     padding-bottom: 4rem;
 }

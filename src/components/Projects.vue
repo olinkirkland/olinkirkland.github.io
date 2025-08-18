@@ -120,7 +120,28 @@ ul.projects-list {
 <style lang="scss" scoped>
 @media (max-width: 768px) {
     ul.projects-list {
-        grid-template-columns: 1fr;
+        /* Width should be 100% of the viewport, and align to the left */
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+
+        /* Cards should be scrollable, with one card visible at a time */
+        display: flex;
+        overflow-x: auto;
+        gap: 1rem;
+        scroll-snap-type: x mandatory;
+        padding: 2rem;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* Internet Explorer and Edge */
+        &::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, and Opera */
+        }
+
+        > li {
+            flex: 0 0 auto;
+            scroll-snap-align: center;
+            width: 95%;
+        }
     }
 }
 </style>
