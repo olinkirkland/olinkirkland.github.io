@@ -10,7 +10,12 @@
         <section>
             <div class="flex center">
                 <Button
-                    @click="downloadResume"
+                    @click="
+                        downloadFile(
+                            '/assets/files/resume-en.pdf',
+                            'olin_kirkland_resume.pdf'
+                        )
+                    "
                     class="accent-1 full-width-mobile"
                 >
                     <i class="fas fa-arrow-down"></i>
@@ -38,7 +43,7 @@
 </template>
 
 <script setup lang="ts">
-import downloadResume from '../download-resume';
+import downloadFile from '../download-helper';
 import Wave from './Wave.vue';
 
 function onClickLinkedin() {

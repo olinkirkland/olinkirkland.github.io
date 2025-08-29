@@ -14,7 +14,15 @@
             <!-- Social Links and Resume Button -->
             <div class="hero-links">
                 <!-- Download Resume -->
-                <Button class="light" @click="downloadResume">
+                <Button
+                    class="light"
+                    @click="
+                        downloadFile(
+                            '/assets/files/resume-en.pdf',
+                            'olin_kirkland_resume.pdf'
+                        )
+                    "
+                >
                     <i class="fas fa-arrow-down"></i>
                     <span>Download my Resume</span>
                 </Button>
@@ -51,7 +59,7 @@
 </template>
 
 <script setup lang="ts">
-import downloadResume from '../download-resume';
+import downloadFile from '../download-helper';
 import Wave from './Wave.vue';
 </script>
 

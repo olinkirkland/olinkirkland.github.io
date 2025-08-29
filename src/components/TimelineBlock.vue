@@ -119,10 +119,9 @@ const color = computed(() => {
 
     > .timeline-dot-background {
         position: absolute;
-        top: 0.8rem;
         width: 3.2rem;
         height: 3.2rem;
-        transform: translateY(-25%);
+        transform: translateY(0.5rem);
         border-radius: 50%;
         background-color: var(--surface);
         border: 1px solid var(--border);
@@ -131,9 +130,9 @@ const color = computed(() => {
     > .timeline-dot {
         // Colored dot
         position: absolute;
-        top: 0.85rem;
         width: 1.6rem;
         height: 1.6rem;
+        transform: translateY(calc(0.5rem + 50%));
         border-radius: 50%;
         background-color: var(--border); // Overridden by inline style
     }
@@ -142,8 +141,8 @@ const color = computed(() => {
         border-right: 1px solid var(--border);
         width: 1px;
         position: absolute;
-        top: 0.4rem;
-        bottom: 0;
+        top: 1.2rem;
+        bottom: -2rem;
         left: 50%;
         transform: translateX(-50%);
     }
