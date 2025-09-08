@@ -23,7 +23,7 @@
                         )
                     "
                 >
-                    <i class="fas fa-arrow-down"></i>
+                    <i class="fas fa-file-download"></i>
                     <span>Download my Resume</span>
                 </Button>
 
@@ -39,6 +39,7 @@
                     >
                         <i class="icon fab fa-github"></i>
                     </a>
+
                     <a
                         href="https://linkedin.com/in/olin-kirkland"
                         class="icon"

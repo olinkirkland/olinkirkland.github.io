@@ -14,6 +14,15 @@
                     New York.
                 </p>
 
+                <a
+                    class="link"
+                    href="https://unsplash.com/photos/a-river-with-trees-and-hills-around-it-kufBky2w9Gw"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Hero image by Clay Banks on Unsplash
+                </a>
+
                 <Button class="dark" @click="$emit('scrollToTop')">
                     <i class="fas fa-arrow-up"></i>
                     <span>Back to top</span>
@@ -114,6 +123,19 @@
                     me@olinkirk.land
                 </a>
 
+                <Button
+                    class="dark"
+                    @click="
+                        downloadFile(
+                            '/assets/files/resume-en.pdf',
+                            'olin_kirkland_resume.pdf'
+                        )
+                    "
+                >
+                    <i class="fas fa-file-download"></i>
+                    <span>Download my Resume</span>
+                </Button>
+
                 <!-- Social links -->
                 <div class="flex">
                     <a
@@ -150,6 +172,7 @@
 </template>
 
 <script setup lang="ts">
+import downloadFile from '../download-helper';
 import Wave from './Wave.vue';
 
 defineEmits<{ (e: 'scrollToTop'): void }>();
