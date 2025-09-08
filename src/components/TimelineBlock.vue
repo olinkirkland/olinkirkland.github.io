@@ -2,16 +2,15 @@
     <div class="timeline-block">
         <div class="company-location-and-dates">
             <div class="flex">
-                <h2>
-                    <strong>{{ company }}</strong>
-                </h2>
                 <a
                     class="icon"
                     :href="link"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <i class="fas fa-link"></i>
+                    <h2>
+                        <strong>{{ company }}</strong>
+                    </h2>
                 </a>
             </div>
             <p>{{ location }}</p>
@@ -191,6 +190,7 @@ const color = computed(() => {
             display: block !important;
             line-height: 1.2;
             max-width: 20rem;
+            margin-left: auto;
             > li {
                 display: inline !important;
                 font-size: 1.4rem;

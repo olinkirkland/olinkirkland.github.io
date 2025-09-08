@@ -36,8 +36,8 @@ const timelineEntries = [
         company: 'Paul Bernhard Exhibits',
         position: 'Application Developer',
         description: [
-            'Created museum touchscreen apps and kiosks',
-            'Procured requirements from museum staff'
+            'Rapidly prototyped and deployed exhibit applications',
+            'Translated exhibit concepts into interactive experiences'
         ],
         link: 'https://www.pbe.design/'
     },
