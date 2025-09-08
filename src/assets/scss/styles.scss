@@ -78,6 +78,10 @@ button.link {
     text-decoration: none;
     border-bottom: 1px dashed currentColor;
     line-height: 1.25;
+
+    &--alt {
+        color: var(--surface);
+    }
 }
 
 p > a {

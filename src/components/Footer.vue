@@ -15,12 +15,12 @@
                 </p>
 
                 <a
-                    class="link"
+                    class="link link--alt"
                     href="https://unsplash.com/photos/a-river-with-trees-and-hills-around-it-kufBky2w9Gw"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Hero image by Clay Banks on Unsplash
+                    Hero section image by Clay Banks
                 </a>
 
                 <Button class="dark" @click="$emit('scrollToTop')">
