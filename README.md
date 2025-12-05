@@ -16,5 +16,3 @@
     ```bash
     npm install
     ```
-   
-disregard: https://share.icloud.com/photos/0c5LqxK1OYc1G5qYwciKLLvbw
